@@ -4,7 +4,7 @@ Demonstration of automatic build-and-test for Windows applications using MSBuild
 
 **Note**: This is for our cloud service https://circleci.com/. For use in CircleCI Server (the "on-premises" version of CircleCI), please refer to [`HelloVCSuite-Server`](https://github.com/CircleCI-Public/HelloVCSuite-Server).
 
-# Quick start
+# Le Quick start
 
 Fork this repository and setup a CircleCI project for your own copy.
 
