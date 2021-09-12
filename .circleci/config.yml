@@ -9,8 +9,8 @@ jobs:
 #       image: windows-server-2019-vs2019:stable
     executor:
       name: windows/default
-    shell: powershell.exe
-    resource_class: windows.medium
+#     shell: powershell.exe
+#     resource_class: windows.medium
     steps:
       - checkout
       - run:
@@ -30,8 +30,8 @@ jobs:
 #       image: windows-server-2019-vs2019:stable
     executor:
       name: windows/default
-    shell: powershell.exe
-    resource_class: windows.medium
+#     shell: powershell.exe
+#     resource_class: windows.medium
     steps:
       - run:
           name: Start WPR
