@@ -11,12 +11,14 @@ jobs:
       - checkout
       - run:
           name: Build with MSBuild
-          command: msbuild -p:Configuration=x86
+          command: msbuild -p:Configuration=Release|x86
 
       - store_artifacts:
-          path: x64/Release
+#           path: x64/Release
+          path: x86/Release
       - persist_to_workspace:
-          root: x64/Release
+#           root: x64/Release
+          root: x86/Release
           paths:
             - ./
 
