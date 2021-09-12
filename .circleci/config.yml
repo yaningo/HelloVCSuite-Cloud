@@ -36,7 +36,7 @@ jobs:
       - run:
           name: Run native unit tests
           command: |
-            & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\TestPlatform\vstest.console.exe" .\HelloVCTest.dll /InIsolation /platform:x64
+            & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\TestPlatform\vstest.console.exe" .\HelloVCTest.dll /InIsolation /platform:Win32
       - run:
           name: Stop WPR
           command: wpr -stop wpr.etl
