@@ -5,17 +5,12 @@ orbs:
   
 jobs:
   build:
-#     machine:
-#       image: windows-server-2019-vs2019:stable
     executor:
       name: windows/default
-#     shell: powershell.exe
-#     resource_class: windows.medium
     steps:
       - checkout
       - run:
           name: Build with MSBuild
-#           command: msbuild -p:Configuration=release
           command: msbuild -p:Configuration=x86
 
       - store_artifacts:
@@ -26,12 +21,8 @@ jobs:
             - ./
 
   test:
-#     machine:
-#       image: windows-server-2019-vs2019:stable
     executor:
       name: windows/default
-#     shell: powershell.exe
-#     resource_class: windows.medium
     steps:
       - run:
           name: Start WPR
