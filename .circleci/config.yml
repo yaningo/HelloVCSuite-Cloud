@@ -11,8 +11,7 @@ jobs:
       - checkout
       - run:
           name: Build with MSBuild
-#           command: msbuild -p:Configuration=release -p:Platform=x86
-          command: msbuild /property:Configuration=Release /property:Platform=x86
+          command: msbuild -p:Configuration=release
 
       - store_artifacts:
           path: x64/Release
@@ -37,7 +36,7 @@ jobs:
       - run:
           name: Run native unit tests
           command: |
-            & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\TestPlatform\vstest.console.exe" .\HelloVCTest.dll /InIsolation /platform:x86
+            & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\TestPlatform\vstest.console.exe" .\HelloVCTest.dll /InIsolation /platform:x64
       - run:
           name: Stop WPR
           command: wpr -stop wpr.etl
