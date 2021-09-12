@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: Build with MSBuild
-          command: msbuild -p:Configuration=release
+          command: msbuild -p:Configuration=release -p:Platform=Win32
 
       - store_artifacts:
           path: x64/Release
